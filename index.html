@@ -4,6 +4,16 @@
 
 </head>
 <body>
+	<div class="analog">
+			<div class="analog_title">
+				<h2>noise</h2>
+			</div>
+			<hr>
+			<div class="analog_value">
+				<span id="noiseValue"></span><font class="unit">mA</font>
+			</div>
+		</div>
+
 
 </body>
 
@@ -24,7 +34,8 @@
 			smokeValue = cpf.get("a0");
 		
 			noiseValue = cpf.get("a1");
-			
+			document.getElementById("noiseValue").innerHTML = noiseValue;
+
 			if (tempValue != 0 && smokeValue != 0 && noiseValue != 0) {
 				callPHP('temp=&' + tempValue + 'smk=' + smokeValue + '&noise=' + noiseValue)
 			}
