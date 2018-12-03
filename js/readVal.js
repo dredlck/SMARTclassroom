@@ -22,7 +22,7 @@
 			noiseValue2 = (noiseValue1 * 32);
 			document.getElementById("noiseValue").innerHTML = noiseValue2;
 		}
-		if (tempValue != null && smokeValue != nuul && noiseValue != null) {
+		if (tempValue != null && smokeValue != null && noiseValue != null) {
 			var URL = "innobbatus.000webhostapp.com/sendsors/insert.php?temp=" + tempValue + "&smk=" + smokeValue + "&noise=" + noiseValue;
 			xmlhttp.open("GET",URL,true);
 		}
