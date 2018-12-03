@@ -12,7 +12,7 @@
 
 	function loop() {
 		if (cpf) {
-			presValue = dht.get("d4");
+			presValue = cpf.get("d4");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
 			smokeValue1 = (1023 - smokeValue) / 26;
