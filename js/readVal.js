@@ -1,7 +1,7 @@
 
 	setup();
 	
-	var tempValue;
+	var presValue;
 	var smokeValue;
 	var smokeValue1;
 	var noiseValue;
@@ -12,7 +12,7 @@
 
 	function loop() {
 		if (cpf) {
-			tempValue = dht.get("d3");
+			presValue = dht.get("d4");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
 			smokeValue1 = (1023 - smokeValue) / 26;
@@ -23,7 +23,7 @@
 			document.getElementById("noiseValue").innerHTML = noiseValue2;
 		}
 		if (tempValue != null && smokeValue != null && noiseValue != null) {
-			var URL = "innobbatus.000webhostapp.com/sendsors/insert.php?temp=" + tempValue + "&smk=" + smokeValue + "&noise=" + noiseValue;
+			var URL = "innobbatus.000webhostapp.com/sendsors/insert.php?pres=" + presValue + "&smk=" + smokeValue + "&noise=" + noiseValue;
 			xmlhttp.open("GET",URL,true);
 		}
 		setTimeout("loop()", 1000);
