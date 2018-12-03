@@ -8,7 +8,7 @@
 
 	function loop() {
 		if (cpf) {
-			tempValue = toCelsius(cpf.get("d3"));
+			tempValue = cpf.get("d3");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a0");	
 			document.getElementById("smokeValue").innerHTML = smokeValue;
