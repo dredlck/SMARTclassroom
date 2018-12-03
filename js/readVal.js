@@ -51,6 +51,6 @@
 
 	function DHT11() {
 		tempValue = cpf.get("DHT11","D3","dht11temp");
-		ui.set("D3","dht11temp",DHT11GetVal);
-		return DHT11GetVal;
+// 		ui.set("D3","dht11temp",DHT11GetVal);
+// 		return DHT11GetVal;
 	}
