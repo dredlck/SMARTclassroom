@@ -1,5 +1,4 @@
 	
-	import * as DHT11 from './DHTlib/dht.h';
 	setup();
 	
 	var tempValue;
