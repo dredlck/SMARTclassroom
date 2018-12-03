@@ -6,12 +6,12 @@
 	var noiseValue;
 	var noiseValue1;
 	var noiseValue2;
-	
+
 	loop();
 
 	function loop() {
 		if (cpf) {
-			tempValue = cpf.get("DHT11", "D3", "dht11temp");
+			tempValue = cpf.get("DHT11","D3","dht11temp");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
 			smokeValue1 = (1023 - smokeValue) / 26;
@@ -49,4 +49,10 @@
 		if(cpf)
 			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "digital", 3,"INPUT"]');
 		
+	}
+
+	function DHT11() {
+		tempValue = cpf.get("DHT11","D3","dht11temp");
+		ui.set("D2","dht11temp",DHT11GetVal);
+		return DHT11GetVal;
 	}
