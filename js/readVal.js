@@ -14,7 +14,7 @@
 			tempValue = cpf.get("DHT11", "D3", "dht11temp");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
-			smokeValue1 = (1023 - smokeValue) / 26);
+			smokeValue1 = (1023 - smokeValue) / 26;
 			document.getElementById("smokeValue").innerHTML = smokeValue1;
 			noiseValue = cpf.get("a1");
 			noiseValue1 = (noiseValue * 5) / 1023;
