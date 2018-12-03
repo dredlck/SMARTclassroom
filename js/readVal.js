@@ -21,7 +21,7 @@
 			noiseValue2 = (noiseValue1 * 32);
 			document.getElementById("noiseValue").innerHTML = noiseValue2;
 		}
-		if (tempValue != 0 && smokeValue != 0 && noiseValue != 0) {
+		if (tempValue != null && smokeValue != nuul && noiseValue != null) {
 			callPHP('?temp=' + tempValue + '&smk=' + smokeValue + '&noise=' + noiseValue)
 		}
 		setTimeout("loop()", 1000);
@@ -33,8 +33,6 @@
     		httpc.open("POST", url, true); // sending as POSTt
 
     		httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    		httpc.setRequestHeader("Content-Length", params.length); // POST request MUST have a Content-Length header (as per HTTP/1.1)
-
     		httpc.onreadystatechange = function() { //Call a function when the state changes.
        	 	if(httpc.readyState == 4 && httpc.status == 200) { // complete and no errors
            		alert(httpc.responseText); // some processing here, or whatever you want to do with the response
@@ -53,6 +51,6 @@
 
 	function DHT11() {
 		tempValue = cpf.get("DHT11","D3","dht11temp");
-		ui.set("D2","dht11temp",DHT11GetVal);
+		ui.set("D3","dht11temp",DHT11GetVal);
 		return DHT11GetVal;
 	}
