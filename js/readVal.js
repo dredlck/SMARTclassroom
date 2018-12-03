@@ -11,7 +11,7 @@
 
 	function loop() {
 		if (cpf) {
-			tempValue = cpf.get("d3");
+			tempValue = cpf.get("DHT11", "D3", "dht11temp");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
 			smokeValue1 = (1023 - smokeValue) / 26);
