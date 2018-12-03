@@ -9,14 +9,14 @@
 	loop();
 
 	function loop() {
-		
-		tempValue = toCelsius(cpf.get("d3"));
-		document.getElementById("tempValue").innerHTML = tempValue;
-		smokeValue = cpf.get("a0");	
-		document.getElementById("smokeValue").innerHTML = smokeValue;
-		noiseValue = cpf.get("a1");
-		document.getElementById("noiseValue").innerHTML = noiseValue;
-
+		if (cpf) {
+			tempValue = toCelsius(cpf.get("d3"));
+			document.getElementById("tempValue").innerHTML = tempValue;
+			smokeValue = cpf.get("a0");	
+			document.getElementById("smokeValue").innerHTML = smokeValue;
+			noiseValue = cpf.get("a1");
+			document.getElementById("noiseValue").innerHTML = noiseValue;
+		}
 // 		if (tempValue != 0 && smokeValue != 0 && noiseValue != 0) {
 // 			callPHP('temp=' + tempValue + '&smk=' + smokeValue + '&noise=' + noiseValue)
 // 		}
