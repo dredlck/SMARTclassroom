@@ -11,10 +11,11 @@
 			tempValue = cpf.get("d3");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
+			smokeValue = (1023 - smokeValue) / 26;
 			document.getElementById("smokeValue").innerHTML = smokeValue;
 			noiseValue = cpf.get("a1");
 			noiseValue = (noiseValue * 5) / 1023;
-			noiseValue = (noiseValue * 26);
+			noiseValue = (noiseValue * 32);
 			document.getElementById("noiseValue").innerHTML = noiseValue;
 		}
 // 		if (tempValue != 0 && smokeValue != 0 && noiseValue != 0) {
