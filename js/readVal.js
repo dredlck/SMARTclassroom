@@ -1,4 +1,6 @@
 	import dht.h	
+	DHT dht(3, DHT11);
+
 	setup();
 	
 	var tempValue;
@@ -12,7 +14,7 @@
 
 	function loop() {
 		if (cpf) {
-			tempValue = cpf.get("d3");;
+			tempValue = dht.readTemperature();
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
 			smokeValue1 = (1023 - smokeValue) / 26;
