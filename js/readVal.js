@@ -1,4 +1,4 @@
-	
+	import dht.h	
 	setup();
 	
 	var tempValue;
