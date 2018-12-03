@@ -1,16 +1,13 @@
 <script>
 
 	setup();
-	if (window.Worker) {
-		var worker = new Worker("worker.js");
-	}
-			
-	var json = new Object();
 	
 	var tempValue;
 	var smokeValue;
 	var noiseValue;
 	
+	loop();
+
 	function loop() {
 		
 		tempValue = toCelsius(cpf.get("d3"));
@@ -42,7 +39,6 @@
     		httpc.send(params);
 	}
 
-	loop();
 
 	// cpf setup
 	function setup(){
