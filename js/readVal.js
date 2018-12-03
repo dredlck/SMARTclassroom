@@ -1,4 +1,3 @@
-<script>
 
 	setup();
 	
@@ -46,5 +45,3 @@
 			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "digital", 3,"INPUT"]');
 		
 	}
-
-</script>
