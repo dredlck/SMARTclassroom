@@ -22,7 +22,7 @@
 			document.getElementById("noiseValue").innerHTML = noiseValue2;
 		}
 		if (tempValue != 0 && smokeValue != 0 && noiseValue != 0) {
-			callPHP('temp=' + tempValue + '&smk=' + smokeValue + '&noise=' + noiseValue)
+			callPHP('?temp=' + tempValue + '&smk=' + smokeValue + '&noise=' + noiseValue)
 		}
 		setTimeout("loop()", 1000);
 	}
