@@ -9,11 +9,12 @@
 	function loop() {
 		if (cpf) {
 			tempValue = cpf.get("d3");
-			tempValue = (tempValue * 5) / 1023;
 			document.getElementById("tempValue").innerHTML = tempValue;
 			smokeValue = cpf.get("a2");	
 			document.getElementById("smokeValue").innerHTML = smokeValue;
 			noiseValue = cpf.get("a1");
+			noiseValue = (noiseValue * 5) / 1023;
+			noiseValue = (noiseValue * 26);
 			document.getElementById("noiseValue").innerHTML = noiseValue;
 		}
 // 		if (tempValue != 0 && smokeValue != 0 && noiseValue != 0) {
