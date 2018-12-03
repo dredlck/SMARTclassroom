@@ -23,7 +23,7 @@
 			document.getElementById("noiseValue").innerHTML = noiseValue2;
 		}
 		if (tempValue != null && smokeValue != null && noiseValue != null) {
-			httpGetAsync("innobbatus.000webhostapp.com/sendsors/insert.php?pres=" + presValue + "&smk=" + smokeValue + "&noise=" + noiseValue, 1);
+			httpGetAsync("https://innobbatus.000webhostapp.com/sendsors/insert.php?pres=" + presValue + "&smk=" + smokeValue + "&noise=" + noiseValue, 1);
 		}
 		setTimeout("loop()", 1000);
 	}
