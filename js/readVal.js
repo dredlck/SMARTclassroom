@@ -12,7 +12,7 @@
 
 	function loop() {
 		if (cpf) {
-			presValue = cpf.get("d4");
+			presValue = cpf.get("d7");
 			document.getElementById("tempValue").innerHTML = presValue;
 			smokeValue = cpf.get("a2");	
 			smokeValue1 = ((1023 - smokeValue) / 26).toFixed(2);
@@ -33,7 +33,7 @@
 	// cpf setup
 	function setup(){
 		if(cpf)
-			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "digital", 3,"INPUT"]');
+			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "digital", 7,"INPUT"]');
 		
 	}
 
