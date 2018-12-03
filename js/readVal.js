@@ -9,8 +9,9 @@
 	function loop() {
 		if (cpf) {
 			tempValue = cpf.get("d3");
+			tempValue = (tempValue * 5) / 1023;
 			document.getElementById("tempValue").innerHTML = tempValue;
-			smokeValue = cpf.get("a0");	
+			smokeValue = cpf.get("a2");	
 			document.getElementById("smokeValue").innerHTML = smokeValue;
 			noiseValue = cpf.get("a1");
 			document.getElementById("noiseValue").innerHTML = noiseValue;
