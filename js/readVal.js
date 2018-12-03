@@ -1,5 +1,5 @@
 	
-include <dht.h>
+#include <dht.h>
 	setup();
 	
 	var tempValue;
