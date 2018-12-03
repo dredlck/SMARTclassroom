@@ -23,7 +23,7 @@
 			document.getElementById("noiseValue").innerHTML = noiseValue2;
 		}
 		if (tempValue != null && smokeValue != null && noiseValue != null) {
-			httpGet("innobbatus.000webhostapp.com/sendsors/insert.php?pres=" + presValue + "&smk=" + smokeValue + "&noise=" + noiseValue);
+			httpGet("innobbatus.000webhostapp.com/sendsors/insert.php?pres=" + presValue + "&smk=" + smokeValue + "&noise=" + noiseValue, 1);
 		}
 		setTimeout("loop()", 1000);
 	}
@@ -37,10 +37,13 @@
 		
 	}
 
-function httpGet(theUrl)
+function httpGetAsync(theUrl, callback)
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
 }
