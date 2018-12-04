@@ -22,9 +22,6 @@
 			noiseValue2 = (noiseValue1 * 32).toFixed(2);
 			document.getElementById("noiseValue").innerHTML = noiseValue2;
 		}
-		if (tempValue != null && smokeValue != null && noiseValue != null) {
-			httpGetAsync("https://innobbatus.000webhostapp.com/sendsors/insert.php?pres=" + presValue + "&smk=" + smokeValue + "&noise=" + noiseValue, 1);
-		}
 		setTimeout("loop()", 1000);
 	}
 	
@@ -36,14 +33,3 @@
 			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "digital", 7,"INPUT"]');
 		
 	}
-
-function httpGetAsync(theUrl, callback)
-{
-    var xmlHttp = new XMLHttpRequest();
-//     xmlHttp.onreadystatechange = function() { 
-//         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-//             callback(xmlHttp.responseText);
-//     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
-}
